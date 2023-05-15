@@ -1,0 +1,161 @@
+.App {
+  text-align: left;
+  white-space: pre-wrap;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, var(--main-width)) 1fr;
+  min-height: 100vh;
+}
+
+.center {
+  background-color: var(--center-bg);
+  padding-top: var(--header-hight);
+}
+
+.c_nav {
+  padding-top: var(--top-hight);
+}
+
+.l_side,
+.r_side {
+  padding-top: var(--header-hight);
+  max-width: 375px;
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.l_side {
+  margin-right: 0rem;
+}
+
+.r_side {
+  margin-left: 0rem;
+}
+
+.tracking_side {
+  margin: 1rem;
+  position: sticky;
+  top: var(--top-hight);
+}
+
+@media screen and (max-width: 1020px) {
+  .tracking_side {
+    display: none;
+  }
+}
+
+
+.hd_re {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+h1 {
+  font-size: 18px;
+  border-left: 12px solid rgb(110, 130, 160);
+  background-color: rgb(90, 100, 110);
+  color: #fff;
+  padding: 10px;
+  margin: 5px;
+}
+
+h2 {
+  font-size: 18px;
+  border-left: 12px solid rgb(110, 130, 160);
+  background-color: rgb(90, 100, 110);
+  color: #fff;
+  padding: 10px;
+  margin: 5px;
+}
+
+.side_h2 {
+  text-align: center;
+  font-size: 15px;
+  color: #ccc;
+}
+
+h3 {
+  font-size: 16px;
+  border-left: 12px solid rgb(110, 130, 160);
+  background-color: rgb(90, 100, 110);
+  color: #fff;
+  padding: 10px;
+  margin: 5px;
+}
+
+h4 {
+  font-size: 18px;
+  color: rgb(90, 100, 110);
+  border-bottom: solid 2px #bbb;
+  border-left: 12px solid #bbb;
+  background-color: #ddd;
+  color: #333;
+  padding: 7px;
+  margin: 5px;
+}
+
+h5 {
+  font-size: 13px;
+  color: rgb(90, 110, 120);
+  border-left: 12px solid rgb(90, 110, 120);
+  padding: 7px;
+  margin: 7px;
+}
+
+h6 {
+  font-size: 13px;
+  color: rgb(90, 110, 120);
+  border-left: 12px solid rgb(90, 110, 120);
+  padding: 8px;
+  margin: 7px;
+}
+
+/* font size */
+p,
+a,
+div,
+span {
+  font-size: 13px;
+}
+
+/* table */
+/* マークダウンテキストに合わせる */
+/* マップテーブル変更予定 */
+table {
+  margin: 10px auto;
+  font-weight: bold;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+table td {
+  padding: 5px;
+  border: 2px #ccc solid;
+}
+
+tbody {
+  font-weight:normal;
+}
+
+thead {
+  font-size: 13px;
+  color: #222;
+  background-color: #ddd;
+}
+
+.no_data_text {
+  padding: 20px;
+  font-size: 16px;
+  color: #222;
+  text-align: center;
+  font-weight: bold;
+}
+
+.close_icon{
+  color: #fff;
+}

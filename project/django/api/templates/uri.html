@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API URI</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #fff;
+      color: #333;
+      text-align: center;
+    }
+
+    table {
+      text-align: left;
+    }
+
+    a {
+      font-size: 1.2rem;
+      color: #D14;
+      margin: 10px 0;
+    }
+
+    .center {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>API URI</h1>
+  <table border="1" style="margin: auto;">
+    <tr>
+      <th>URI</th>
+      <th>GET</th>
+      <th>POST</th>
+      <th>説明</th>
+    </tr>
+    <tr>
+      <td><a href="slideshow">slideshow</a></td>
+      <td class="center">〇</td>
+      <td class="center">×</td>
+      <td>
+        <p>トップページ上部のスライドを定義</p>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="alert">alert</a></td>
+      <td class="center">〇</td>
+      <td class="center">×</td>
+      <td>
+        <p>ページ上位に表示されるアラートを定義(メンテナンス時間など)</p>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="tags">tags</a></td>
+      <td class="center">〇</td>
+      <td class="center">×</td>
+      <td>
+        <p>上位30件の中から15件ランダムなタグを表示</p>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="ghosts">ghosts</a></td>
+      <td class="center">〇</td>
+      <td class="center">×</td>
+      <td>
+        <p>すべてのゴーストを表示</p>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="ghosts/spirit">ghosts/slug</a></td>
+      <td class="center">〇</td>
+      <td class="center">×</td>
+      <td>
+        <p>ゴーストの詳細を表示</p>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="equipments">equipments</a></td>
+      <td class="center">〇</td>
+      <td class="center">×</td>
+      <td>
+        <p>すべての装備を表示</p>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="equipments/videocamera">equipments/slug</a></td>
+      <td class="center">〇</td>
+      <td class="center">×</td>
+      <td>
+        <p>装備の詳細を表示</p>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="curseditems">curseditems</a></td>
+      <td class="center">〇</td>
+      <td class="center">×</td>
+      <td>
+        <p>すべての呪いのアイテムを表示</p>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="curseditems/ouijaboard">curseditems/slug</a></td>
+      <td class="center">〇</td>
+      <td class="center">×</td>
+      <td>
+        <p>呪いのアイテムの詳細を表示</p>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="maps">maps</a></td>
+      <td class="center">〇</td>
+      <td class="center">×</td>
+      <td>
+        <p>すべてのマップを表示</p>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="maps/tanglewoodstreetHouse">mapsslug</a></td>
+      <td class="center">〇</td>
+      <td class="center">×</td>
+      <td>
+        <p>マップの詳細を表示</p>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="evidence">Evidence</a></td>
+      <td class="center">〇</td>
+      <td class="center">×</td>
+      <td>
+        <p>すべての証拠を表示</p>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="evidence/emflevel5">Evidence/slug</a></td>
+      <td class="center">〇</td>
+      <td class="center">×</td>
+      <td>
+        <p>証拠の詳細を表示</p>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="posts">posts</a></td>
+      <td class="center">〇</td>
+      <td class="center">〇</td>
+      <td>
+        <p>すべての投稿を表示</p>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="posts/2254970c-8c09-40bc-a1e6-512fb1585e67">posts/slug</a></td>
+      <td class="center">〇</td>
+      <td class="center">×</td>
+      <td>
+        <p>投稿の詳細を表示</p>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="articles">articles</a></td>
+      <td class="center">〇</td>
+      <td class="center">〇</td>
+      <td>
+        <p>すべての記事を表示</p>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="articles/434223ba-06d0-4c7d-a55f-b568065a8d07">articles/slug</a></td>
+      <td class="center">〇</td>
+      <td class="center">×</td>
+      <td>
+        <p>記事の詳細を表示</p>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="customdifficulty">customdifficulty</a></td>
+      <td class="center">〇</td>
+      <td class="center">×</td>
+      <td>
+        <p>カスタム難易度の詳細（ツール用）</p>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="identification">identification</a></td>
+      <td class="center">〇</td>
+      <td class="center">×</td>
+      <td>
+        <p>ゴースト別証拠可能性（ツール用）</p>
+      </td>
+    </tr>
+
+    <tr>
+      <td><a href="user/maskrom">user</a></td>
+      <td class="center">〇</td>
+      <td class="center">〇</td>
+      <td>
+        <p>ユーザー情報</p>
+      </td>
+    </tr>
+
+
+
+  </table>
+
+</body>
+</html>
