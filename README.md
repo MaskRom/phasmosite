@@ -23,7 +23,7 @@ This repository contains the source code for the Phasmophobia community site, wh
 - English (coming soon)
 
 ### Usage
-1. Access the website at https://phasmosite.com
+1. Access the website at https://nextphobia.com
 2. Browse ghost and item information
 3. Use the strategy tools
 4. Connect with the global community

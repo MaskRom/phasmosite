@@ -6,7 +6,7 @@ import { PostField } from '../../../templates/field/center/PostField';
 import { ItemField } from '../../../templates/field/center/ItemField';
 import { styleByURLState } from '../../../../recoil/styleByURLState';
 import { MapField } from '../../../templates/field/center/MapField';
-// import { TopSlide } from '../../../parts/slideshow/TopSlide';
+import { TopSlide } from '../../../parts/slideshow/TopSlide';
 import { Field } from '../../../templates/field/Field';
 import Style from '../../../../types/TyStyle';
 import { useRecoilState } from 'recoil';
@@ -35,7 +35,7 @@ export const Home = () => {
 
   return (
     <>
-      {/* <TopSlide /> */}
+      <TopSlide />
       <Field title='人気のタグ' fold={true}>
         <TagTopField />
       </Field>

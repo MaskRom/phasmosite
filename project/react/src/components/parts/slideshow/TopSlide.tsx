@@ -6,20 +6,23 @@ import { tagsTopAPIState } from "../../../recoil/APIState";
 import { slideshowAPIState } from "../../../recoil/APIState";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import styled from 'styled-components';
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "swiper/css";
+import back from './back.png';
+import React from "react";
+// import "swiper/css/pagination";
+// import "swiper/css/navigation";
+// // import "swiper/css";
 
 
 
 
 
-export const TopSlide = () => {
+export const TopSlide: React.VFC = () => {
   const slideshowAPI = useRecoilValueLoadable(slideshowAPIState);
 
   return (
     <STopSlide>
-      <Swiper
+      <img src={back} alt="背景" />
+      {/* <Swiper
         className="main_slide"
         autoplay={{
           delay: 5000,
@@ -50,13 +53,18 @@ export const TopSlide = () => {
             <CircularProgress style={{ color: '#aaa' }} />
           </div>
         }
-      </Swiper>
+      </Swiper> */}
     </STopSlide>
   );
 };
 
 
 const STopSlide = styled.div`
+  img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
   transition: 0.5s;
   display: flex;
   align-items: center;

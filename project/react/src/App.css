@@ -1,6 +1,7 @@
 .App {
   text-align: left;
   white-space: pre-wrap;
+  font-family:  -apple-system,"BlinkMacSystemFont","Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif,"Segoe UI Emoji";
 }
 
 main {

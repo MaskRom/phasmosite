@@ -50,7 +50,7 @@ export const Account = () => {
   const [ cookies ] = useCookies();
   return (
     <SAccount>
-      <Popper
+      {/* <Popper
         open={open}
         anchorEl={anchorRef.current}
         role={undefined}
@@ -90,7 +90,7 @@ export const Account = () => {
         onClick={handleToggle}
       >
         <img src={`${process.env.REACT_APP_BASE_PATH}/media/default_user_icon/icon${cookies.icon}.png`} alt="user icon" />
-      </Button>
+      </Button> */}
     </SAccount>
   );
 }
