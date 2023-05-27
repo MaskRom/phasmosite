@@ -20,7 +20,7 @@ export const MapItem = (props: TMapItem) => {
   return (
     <SMapItem onClick={() => { navigate(`/wiki/map/${props.slug}`) }}>
       <td>
-        <img src={props.image1 ? process.env.REACT_APP_BASE_PATH + props.image1 : ''} alt='' />
+        <img src={props.image1 ? props.image1 : ''} alt='' />
       </td>
       <td>
         <p className='map_name'>{props.name}</p>

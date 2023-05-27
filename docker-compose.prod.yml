@@ -25,6 +25,7 @@ services:
     volumes:
       - ./project/django:/django
       - ./static:/static
+      - ./project/react/build:/build
     expose:
       - "8000"
     command: sh -c "/django/entrypoint.sh"

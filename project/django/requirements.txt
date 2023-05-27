@@ -10,3 +10,6 @@ djangorestframework-simplejwt==4.8.0
 django-cors-headers==3.13.0
 django-cleanup==6.0.0
 django-ipware==4.0.2
+
+boto3
+django-storages

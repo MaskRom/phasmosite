@@ -21,7 +21,7 @@ export const GhostRoomItem = (props: TGhostRoomItem) => {
         <p className='map_name_en'>{props.name_en}</p>
       </td>
       <td>
-        <img src={props.image1 ? process.env.REACT_APP_BASE_PATH + props.image1 : ''} alt='' />
+        <img src={props.image1 ? props.image1 : ''} alt='' />
       </td>
     </SGhostRoomItem>
   )

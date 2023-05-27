@@ -11,7 +11,7 @@ export const Profile: React.FC = () => {
   React.useEffect(() => {
     api.get(`/auth/loginuser`)
       .then((res) => {
-        console.log(res);
+        // console.log(res);
       });
   }, []);
 

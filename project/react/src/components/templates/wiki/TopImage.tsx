@@ -16,7 +16,7 @@ type TTopImage = {
 export const TopImage = (props: TTopImage) => {
   const { image2, name, name_en, subtitle, updated_at, level } = props;
   return (
-    <STopImage image2={`${process.env.REACT_APP_BASE_PATH}${image2}`}>
+    <STopImage image2={`${image2}`}>
       <div className='image_flame'></div>
       <p className='top_image_subtitle'>{subtitle}</p>
       <p className='top_image_date'>更新：{updated_at}</p>

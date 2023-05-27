@@ -35,7 +35,7 @@ export const ArticleItem = (props: TArticleTop) => {
     <SArticleItem checkBookmark={checkBookmark}>
       <Link to={`/article/${props.slug}`} className='article_link'>
         <div>
-          <img src={props.image1 ? process.env.REACT_APP_BASE_PATH + props.image1 : ''} alt='' />
+          <img src={props.image1 ? props.image1 : ''} alt='' />
         </div>
         <div>
           <p className='article_title'>{props.title}</p>

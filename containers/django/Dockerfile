@@ -8,6 +8,10 @@ WORKDIR /django
 
 COPY project/django/requirements.txt /django/
 
+RUN apt-get update
+
+RUN apt-get install -y jq
+
 RUN pip install --upgrade pip
 
 RUN pip install -r requirements.txt

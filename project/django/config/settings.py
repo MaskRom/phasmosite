@@ -33,8 +33,10 @@ INSTALLED_APPS = [
     'taggit',
     'django_filters',
     'django_cleanup.apps.CleanupConfig',
+    'storages',
     # Local
     'api',
+    'app',
 ]
 
 MIDDLEWARE = [
@@ -125,21 +127,38 @@ USE_L10N = True
 USE_TZ = True
 
 
+# AWS S3
+
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
+AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+AWS_LOCATION = 'static'
+AWS_DEFAULT_ACL = None
+
+
 # Static files (CSS, JavaScript, Images)
-STATIC_URL = '/static/'
 
 STATIC_ROOT = '/static/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-    os.path.join(BASE_DIR, 'app/static'),
-)
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
+if DEBUG:
+    STATIC_URL = '/static/'
+else:
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{AWS_LOCATION}/'
+    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
 # Media files (User Uploaded)
-MEDIA_URL = '/media/'
 
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+DEFAULT_FILE_STORAGE = 'api.storage_backends.MediaStorage'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

@@ -20,7 +20,7 @@ export const Item = (props: TItem) => {
     <SItem center={center}>
       <Tooltip title={name} disableInteractive>
         <Link to={`/${url}/${slug}`}>
-          <img src={image1 ? process.env.REACT_APP_BASE_PATH + image1 : ''} />
+          <img src={image1 ?  image1 : ''} />
           <p>{name.length > 8 ? `${name.slice(0, 7)}…` : name}</p>
         </Link>
       </Tooltip>

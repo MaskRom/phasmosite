@@ -9,11 +9,6 @@ services:
     platform: linux/x86_64
     volumes:
       - db_data:/var/lib/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     env_file:
       - .env.dev
     healthcheck:
@@ -30,6 +25,7 @@ services:
     volumes:
       - ./project/django:/django
       - ./static:/static
+      - ./project/react/build:/build
     ports:
       - "8000:8000"
     command: sh -c "/django/entrypoint.sh"
