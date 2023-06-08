@@ -21,7 +21,7 @@ export const FloorByField = (props: TFloorByField) => {
             <div key={index}>
               <h4>{item.name}</h4>
               {item.image ?
-                <img src={`${item.image}`} alt={item.name} /> :
+                <img src={`https://beta-phasmosite-s3.s3.amazonaws.com/media/${item.image}`} alt={item.name} /> :
                 <p className="no_data_text">情報がありません</p>
               }
             </div>

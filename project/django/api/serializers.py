@@ -145,7 +145,8 @@ class MapSerializer(serializers.ModelSerializer):
         item['updated_at'] = relative_time(item['updated_at'])
         item['floorBy'] = [{
             'name': i.name,
-            'image':str(i.image).replace('\\', '/')}
+            'image': str(i.image),
+            "a":"a"}
             for i in FloorByMap.objects.filter(maps=item['slug']).order_by('order')]
         item['room'] = [{
             'index': i.order,
